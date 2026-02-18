@@ -26,7 +26,7 @@ hr {
 }
 
 .header {
-  font-size: 65px;
+  font-size: 50px;
   font-weight: 1000;
   text-align: left;
   margin: 0px;
@@ -40,26 +40,22 @@ hr {
   min-height: 100vh;
   align-items: center;
   width: 100%;
-  background-color: #FDFDFF;
+  background-color: #FFFFFF;
   gap: 0px;
 }
 
-.profile-card {
-  background-color: #f0f0f0;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  text-align: center;
-  width: 300px;
-  margin-top: 20px;
-}
 
 .profile-img {
-  width: 160px;
-  height: 160px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   margin-bottom: 20px;
   outline: 3px solid #00000033;
+}
+
+.profile-icon {
+  width: 55px;
+  height: 55px;
 }
 
 .header2 {
@@ -70,14 +66,14 @@ hr {
 }
 
 .section-header {
-  font-size: 55px;
+  font-size: 45px;
   color: #000000;
   margin-bottom: 10px;
   font-weight: bolder;
 }
 
 .gray-script {
-  font-size: 23px;
+  font-size: 17px;
   color: #aaaaaaff;
   margin-bottom: 20px;
   font-weight: 600;
@@ -144,7 +140,7 @@ hr {
 }
 
 .script {
-    font-size: 23px;
+    font-size: 17px;
     color: #000000;
     font-weight: 300;
     padding: 5px;
@@ -166,7 +162,7 @@ hr {
 }
 
 .vertical-spacer {
-    height: 70px;
+    height: 50px;
 }
 
 .skill-card {
@@ -206,7 +202,7 @@ hr {
 }
 
 .skill-name {
-    font-size: 45px;
+    font-size: 40px;
     color: #000000;
     font-weight: bolder;
 }
@@ -225,10 +221,7 @@ hr {
     row-gap: 15px;
 }
 
-.profile-icon {
-  width: 55px;
-  height: 55px;
-}
+
 
 .vertical-divider {
   width: 2px;
