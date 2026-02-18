@@ -88,7 +88,16 @@ hr {
   width: 100%;
   gap: 0px;
   padding: 30px;
-  padding-left: 70px;
+}
+
+.skill-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  gap: 0px;
+  padding: 30px;
 }
 
 .box1 {
@@ -215,8 +224,10 @@ hr {
 
 .skills-container {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: start;
+    justify-content: center;
+    align-items: center;
     column-gap: 1%;
     row-gap: 15px;
 }

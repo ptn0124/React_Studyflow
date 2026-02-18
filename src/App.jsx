@@ -4,6 +4,8 @@ import profile from './assets/Profile_image.png'
 function App() {
   return (
     <div className="container">
+
+      
       <div className="custom-shape-divider-top-1770912374">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
           <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".4" class="shape-fill"></path>
@@ -11,6 +13,8 @@ function App() {
           <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" opacity=".5 " class="shape-fill"></path>
         </svg>
       </div>
+
+
       <div className="profile-section">
         <p className="section-header">About Me</p>
         <hr className = "divider"/>
@@ -37,14 +41,18 @@ function App() {
         <p className="script">- 현재 북일고등학교 2학년에 재학 중이에요!</p>
         <p className="script">- BADA 동아리에 속해 프로그래밍 경험을 쌓고 있어요!</p>
         <div className="vertical-spacer"></div> 
-        <p className="section-header">Skill Stacks</p>
-        <hr className = "divider"/>
-        <div className="skills-container">
-          <div className="skill-card">
-            <div className = "skill-box1">
+      </div>
+
+
+      <div className="skill-section">
+          <p className="section-header">Skill Stacks</p>
+          <hr className = "divider"/>
+          <div className="skills-container">
+           <div className="skill-card">
+              <div className = "skill-box1">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" className="skill-icon"/>
                 <p className="skill-name">Python</p>
-            </div>
+              </div>
             <hr className="skill-divider"/>
             <p className="script">주로 알고리즘 문제 풀이에 사용하고 있어요.</p> {/* 한 줄에 script 하나씩 작성하기 */}
           </div>
@@ -110,11 +118,6 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="vertical-spacer"></div>
-        <div className="vertical-spacer"></div>
-        <div className="vertical-spacer"></div>
-        <div className="vertical-spacer"></div>
-        <div className="vertical-spacer"></div>
       </div>
     </div>
   )
