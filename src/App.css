@@ -56,6 +56,11 @@ hr {
 .profile-icon {
   width: 55px;
   height: 55px;
+  transition: transform 0.3s cubic-bezier(.01,.69,.55,1);
+}
+
+.profile-icon:hover {
+  transform: scale(1.1);
 }
 
 .header2 {
@@ -84,7 +89,7 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  align-items: left;
+  align-items: center;
   width: 100%;
   gap: 0px;
   padding: 30px;
@@ -115,6 +120,15 @@ hr {
   padding: 10px;
   margin-left: 20px;
   gap: 5px;
+}
+
+.box3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: left;
+  width: 85%
+
 }
 
 .skill-box2 {
@@ -188,6 +202,18 @@ hr {
     text-align: center;
     width: 42%;
     min-height: 80px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(.01,.69,.55,1);
+}
+
+.skill-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skill-card:hover {
+    transform: translateY(-3px) scale(1.03);
 }
 
 .skill-box1 {
@@ -231,8 +257,6 @@ hr {
     column-gap: 1%;
     row-gap: 15px;
 }
-
-
 
 .vertical-divider {
   width: 2px;

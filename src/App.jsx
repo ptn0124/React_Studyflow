@@ -1,7 +1,28 @@
+import { useEffect } from 'react'
 import './App.css'
 import profile from './assets/Profile_image.png'
 
 function App() {
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+        else {
+          entry.target.classList.remove('show');
+        }
+      });
+    }, {threshold: 0.6});
+    
+    const skillCards = document.querySelectorAll('.skill-card');
+    skillCards.forEach((card) => observer.observe(card));
+
+    return () => observer.disconnect();
+  }, []);
+
+
   return (
     <div className="container">
 
@@ -18,29 +39,31 @@ function App() {
       <div className="profile-section">
         <p className="section-header">About Me</p>
         <hr className = "divider"/>
-        <div className="box1">
-          <img src={profile} alt = "Profile" className="profile-img"/>
-          <div className = "box2">
-            <p className = "header2">박태환</p>
-            <p className = "gray-script">Taehwan Park</p>
+        <div className = "box3">
+          <div className="box1">
+            <img src={profile} alt = "Profile" className="profile-img"/>
+            <div className = "box2">
+              <p className = "header2">박태환</p>
+              <p className = "gray-script">Taehwan Park</p>
+            </div>
           </div>
+          <p className="gray-script">Email: pthfdsa@gmail.com</p>
+          <div className = "box1">
+            <a href="https://github.com/ptn0124" target="_blank" rel="noopener noreferrer">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub Profile" className="profile-icon" />
+            </a>
+            <a href="https://instagram.com/qqkrxoghks" target="_blank" rel="noopener noreferrer">
+              <img src="https://static.cdninstagram.com/rsrc.php/v4/yG/r/De-Dwpd5CHc.png" alt="Instagram Profile" className="profile-icon" />
+            </a>
+            <a href="https://solved.ac/profile/dsharpgsharp" target="_blank" rel="noopener noreferrer">
+              <img src="https://static.solved.ac/logo.svg" alt="solved.ac favicon (large)" className="profile-icon" />
+            </a>
+          </div>
+          <p className="header">안녕하세요! 저는..</p>
+          <p className="script">- 현재 북일고등학교 2학년에 재학 중이에요!</p>
+          <p className="script">- BADA 동아리에 속해 프로그래밍 경험을 쌓고 있어요!</p>
+          <div className="vertical-spacer"></div> 
         </div>
-        <p className="gray-script">Email: pthfdsa@gmail.com</p>
-        <div className = "box1">
-          <a href="https://github.com/ptn0124" target="_blank" rel="noopener noreferrer">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub Profile" className="profile-icon" />
-          </a>
-          <a href="https://instagram.com/qqkrxoghks" target="_blank" rel="noopener noreferrer">
-            <img src="https://static.cdninstagram.com/rsrc.php/v4/yG/r/De-Dwpd5CHc.png" alt="Instagram Profile" className="profile-icon" />
-          </a>
-          <a href="https://solved.ac/profile/dsharpgsharp" target="_blank" rel="noopener noreferrer">
-            <img src="https://static.solved.ac/logo.svg" alt="solved.ac favicon (large)" className="profile-icon" />
-          </a>
-        </div>
-        <p className="header">안녕하세요! 저는..</p>
-        <p className="script">- 현재 북일고등학교 2학년에 재학 중이에요!</p>
-        <p className="script">- BADA 동아리에 속해 프로그래밍 경험을 쌓고 있어요!</p>
-        <div className="vertical-spacer"></div> 
       </div>
 
 
